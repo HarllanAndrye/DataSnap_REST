@@ -83,7 +83,9 @@ URL para fazer o logout (sair da aplicação), passando o id do usuário no corp
 
 Exemplo: localhost:8080/datasnap/rest/tapi/logout
 
-![url logout](images/api_logout.png)
+<p align="center">
+  <img src="images/api_logout.png" width="50%"/>
+</p>
 
 
 **`DELETE`** /remove_wishlist?userid={id_do_usuário}&itemid={id_do_item}
