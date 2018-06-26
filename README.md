@@ -59,7 +59,7 @@ Tem que ser passado no Header da requisição o token, com a chave "*Authorizati
 
 Exemplo: localhost:8080/datasnap/rest/tapi/user/1
 
-`**GET**` /getaddress/{CEP}
+**`GET`** /getaddress/{CEP}
 
 Retorna o endereço solicitado por meio do CEP passado na URL. Foi utilizada a API [ViaCEp](https://viacep.com.br/).
 
@@ -72,7 +72,7 @@ URL para autenticar o cliente, passando e-mail e senha no corpo da requisição.
 
 Exemplo: localhost:8080/datasnap/rest/tapi/login
 
-![url login](images/api_login.png)
+<img src="images/api_login.png" align="center" />
 
 `**POST**` /logout
 
