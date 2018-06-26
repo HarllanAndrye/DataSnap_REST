@@ -72,7 +72,10 @@ URL para autenticar o cliente, passando e-mail e senha no corpo da requisição.
 
 Exemplo: localhost:8080/datasnap/rest/tapi/login
 
-<img src="images/api_login.png" style="align:center; width:80%;" />
+<p align="center">
+  <img src="images/api_login.png" width="50%"/>
+</p>
+
 
 **`POST`** /logout
 
