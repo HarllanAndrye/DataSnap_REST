@@ -52,7 +52,7 @@ Para o teste da API foi utilizado o [Postman](https://www.getpostman.com/), mas 
 A URL principal é: localhost:8080/datasnap/rest/tapi
 
 
-`**GET**` /user/{id}
+**`GET`** /user/{id}
 
 URL que retorna os dados do usuário de acordo com o id do mesmo passado por parâmetro.
 Tem que ser passado no Header da requisição o token, com a chave "*Authorization*" e o valor "*Bearer {token}*". Esse token é gerado quando o usuário faz o login.
@@ -66,15 +66,15 @@ Retorna o endereço solicitado por meio do CEP passado na URL. Foi utilizada a A
 Exemplo: localhost:8080/datasnap/rest/tapi/getaddress/58400123
 
 
-`**POST**` /login
+**`POST`** /login
 
 URL para autenticar o cliente, passando e-mail e senha no corpo da requisição.
 
 Exemplo: localhost:8080/datasnap/rest/tapi/login
 
-<img src="images/api_login.png" align="center" />
+<img src="images/api_login.png" style="align:center; width:80%;" />
 
-`**POST**` /logout
+**`POST`** /logout
 
 URL para fazer o logout (sair da aplicação), passando o id do usuário no corpo da requisição.
 
@@ -83,7 +83,7 @@ Exemplo: localhost:8080/datasnap/rest/tapi/logout
 ![url logout](images/api_logout.png)
 
 
-`**DELETE**` /remove_wishlist?userid={id_do_usuário}&itemid={id_do_item}
+**`DELETE`** /remove_wishlist?userid={id_do_usuário}&itemid={id_do_item}
 
 Este método envia para o servidor uma solicitação para remover um determinado item da lista de desejos de um determinado usuário.
 Também tem que ser passado no Header da requisição o token.
