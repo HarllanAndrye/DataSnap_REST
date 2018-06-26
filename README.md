@@ -45,11 +45,48 @@ CREATE TABLE `wishlist` (
 
 ## Como utilizar
 
-**Método GET**
+Deve-se configurar a conexão com o BD no componente TSQLConnection na propriedade Driver, em ServerMethodsUnit1.pas.
 
-**Método POST**
+Para o teste da API foi utilizado o [Postman](https://www.getpostman.com/), mas você pode utilizar outra ferramenta de sua preferência.
 
-**Método DELETE**
+A URL principal é: localhost:8080/datasnap/rest/tapi
+
+
+`GET` /user/{id}
+
+URL que retorna os dados do usuário de acordo com o id do mesmo passado por parâmetro.
+Tem que ser passado no Header da requisição o token, com a chave "*Authorization*" e o valor "*Bearer {token}*". Esse token é gerado quando o usuário faz o login.
+
+Exemplo: localhost:8080/datasnap/rest/tapi/user/1
+
+`GET` /getaddress/{CEP}
+
+Retorna o endereço solicitado por meio do CEP passado na URL. Foi utilizada a API [ViaCEp](https://viacep.com.br/).
+
+Exemplo: localhost:8080/datasnap/rest/tapi/getaddress/58400123
+
+
+`POST` /login
+
+URL para autenticar o cliente, passando e-mail e senha no corpo da requisição.
+
+Exemplo: localhost:8080/datasnap/rest/tapi/login
+![url login](images/api_login.png)
+
+`POST` /logout
+
+URL para fazer o logout (sair da aplicação), passando o id do usuário no corpo da requisição.
+
+Exemplo: localhost:8080/datasnap/rest/tapi/logout
+![url logout](images/api_logout.png)
+
+
+`DELETE` /remove_wishlist?userid={id_do_usuário}&itemid={id_do_item}
+
+Este método envia para o servidor uma solicitação para remover um determinado item da lista de desejos de um determinado usuário.
+Também tem que ser passado no Header da requisição o token.
+
+Exemplo: localhost:8080/datasnap/rest/tapi/remove_wishlist?userid=1&itemid=3
 
 
 ## Licença
